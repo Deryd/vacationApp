@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using VacationApp.Models;
 
 namespace VacationApp.Data
 {
@@ -12,5 +13,8 @@ namespace VacationApp.Data
             : base(options)
         {
         }
+
+        public DbSet<VacationRequest> VacationRequests { get; set; }
+        public DbSet<Employee> Employees { get; set; }
     }
 }
